@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Yekan';
+    src: url('fonts/Yekan.eot');
+    src: url('fonts/Yekan.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Yekan.woff2') format('woff2'),
+    url('fonts/Yekan.woff') format('woff'),
+    url('fonts/Yekan.otf') format('opentype'),
+    url('fonts/Yekan.ttf') format('truetype'),
+    url('fonts/Yekan.svg#Yekan') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Yekan, Tahoma, serif;
+    outline: none;
+}
+/* first row */
+.container{
+    width: 80vw;
+    margin: 0 auto;
+}
+.head{
+    background: #37474F;
+    width: 100vw;
+}
+.max-width{
+    display: flex;
+    width: 100%;
+}
+.header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header div a{
+    color: #ffffff;
+    margin: 0 5px;
+    font-size: 15px;
+}
+#welcome{
+    display: none;
+}
+/* second row */
+.second-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.search-box{
+    border: 1px solid #ffffff;
+    box-shadow: 1px 1px 10px gray;
+    flex-grow: 1;
+    display: flex;
+    margin: 0 20px;
+    padding: 15px;
+}
+.search-box i{
+    margin: 20px 0 20px 10px;
+}
+.search{
+    border: 0;
+    border-bottom: 2px solid #00BCD4;
+    flex-grow: 1;
+    padding: 5px;
+}
+.search-button{
+    margin-right: 10px;
+    box-shadow: 1px 1px 10px gray;
+    cursor: pointer;
+    padding: 10px 25px;
+    border: 1px solid #00BCD4;
+    background: #00BCD4;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.search-button:hover{
+    box-shadow: 5px 5px 10px gray;
+    transition: all 0.5s ease;
+}
+.logo2{
+    display: none;
+}
+.cart-button{
+    margin-right: 20px;
+    font-size: 17px;
+    box-shadow: 1px 1px 10px gray;
+    padding: 15px 15px;
+    border: 1px solid #00C851;
+    background: #00C851;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.cart-button:hover{
+    box-shadow: 5px 5px 10px gray;
+    transition: all 0.5s ease;
+}
+/* nav */
+.nav{
+    width: 100vw;
+    background: #00BCD4;
+    padding: 15px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
+}
+.menu li a{
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.menu li a:not(.menu-button):hover {
+    color: #005A6F;
+    transition: all 0.5s ease;
+}
+.menu .menu-button{
+    border: 1px solid #00C851;
+    background: #00C851;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px gray;
+    transition: all 0.5s ease;
+}
+.menu .menu-button:hover{
+    box-shadow: 5px 5px 10px gray;
+    transition: all 0.5s ease;
+}
+.nav-btn{
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+}
+.nav-btn2{
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+/* grid
+.grid-container{
+    display: grid;
+    grid-template-areas: 'grid1 grid1 grid1' 'grid3 grid3 grid2' 'grid4 grid4 grid4';
+    width: 1425px;
+    grid-gap: 10px;
+    margin: 20px 30px;
+}
+.grid1{
+    grid-area: grid1;
+}
+.grid2{
+    grid-area: grid2;
+}
+.grid3{
+    grid-area: grid3;
+}
+.grid4{
+    grid-area: grid4;
+}
+*/
+@media (max-width: 1400px){
+    .container{
+        width: 90vw;
+    }
+}
+@media (max-width: 1280px) {
+    .container{
+        width: 98vw;
+    }
+}
+@media (max-width: 1150px ){
+    .menu-button{
+        display: none;
+    }
+}
+@media (max-width: 1030px ){
+    .logo{
+        margin-right: -15px;
+    }
+    .cart-button{
+        margin-left: 0;
+        margin-right: 10px;
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    .search-box{
+        margin: 0 10px;
+        padding: 10px;
+    }
+    .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 1s ease;
+    }
+    .active{
+        left:0;
+    }
+    .nav-btn{
+        display: block;
+    }
+}
+@media (max-width: 750px) {
+    #first , #second{
+        display: none;
+    }
+    #welcome{
+        display: block;
+        margin-right: 15px;
+    }
+    #welcome a{
+        color: #37474F;
+    }
+    .head{
+        background: #00BCD4;
+        padding: 0;
+    }
+    .second-head{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .logo2{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    .nav-btn2{
+        display: block;
+    }
+}
