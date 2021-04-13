@@ -146,27 +146,109 @@
     cursor: pointer;
     margin-right: 10px;
 }
-/* grid
+/* grid */
 .grid-container{
+    width: 75vw;
+    margin: 10px auto;
     display: grid;
     grid-template-areas: 'grid1 grid1 grid1' 'grid3 grid3 grid2' 'grid4 grid4 grid4';
-    width: 1425px;
-    grid-gap: 10px;
-    margin: 20px 30px;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+.grid-container img{
+    width: 100%;
+    height: 40vh;
+}
+.tabs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+.tab{
+    text-align: center;
+    color: gray;
+    background: #ffffff;
+    width: 25%;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    transition: all 0.5s ease;
+    border: 1px solid #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+.tab-active{
+    background: #00BCD4;
+    color: #ffffff;
+}
+.tab:hover{
+    background: #00BCD4;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.prev , .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.6s ease;
+    user-select: none;
+}
+.prev{
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .grid1{
+    position: relative;
     grid-area: grid1;
 }
 .grid2{
+    position: relative;
     grid-area: grid2;
 }
 .grid3{
     grid-area: grid3;
 }
 .grid4{
+    position: relative;
     grid-area: grid4;
 }
-*/
 @media (max-width: 1400px){
     .container{
         width: 90vw;
@@ -197,18 +279,7 @@
         padding: 10px;
     }
     .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 1s ease;
-    }
-    .active{
-        left:0;
+        display: none;
     }
     .nav-btn{
         display: block;
@@ -217,6 +288,12 @@
 @media (max-width: 750px) {
     #first , #second{
         display: none;
+    }
+    .grid-container{
+        width: 85vw;
+    }
+    .tab{
+        padding: 5px;
     }
     #welcome{
         display: block;
