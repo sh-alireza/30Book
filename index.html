@@ -46,7 +46,7 @@
         <a class="cart-button" href="#"><i class="fa fa-cart-plus"></i> سبد خرید </a>
     </div>
     <nav class="nav">
-        <ul class="menu container">
+        <ul id="menu" class="menu container">
             <li><a href="#"><i class="fa fa-home"></i> خانه </a></li>
             <li><a href="#">محبوب ترین ها <i class="fa fa-caret-down"></i></a></li>
             <li><a href="#">کتاب عمومی <i class="fa fa-caret-down"></i></a></li>
@@ -61,25 +61,82 @@
             <li><a class="menu-button" href="#">مجله 30بوک</a></li>
         </ul>
         <div class="nav-btn">
-            <i id="nav-btn" class="fa fa-bars fa-lg"></i>
+            <i id="nav-btn" class="fa fa-bars fa-lg" onclick="menuBtn()"></i>
         </div>
     </nav>
-<!-- grid
+<!-- grid -->
     <div class="grid-container">
         <div class="grid1">
-            <img src="images/grid/first%20row/4050takhfif.jpg" alt="takhfif" width="1425">
+            <div class="tabs">
+                <span class="tab" onclick="currentSlide(1)">40 و 50 درصدی ها</span>
+                <span class="tab" onclick="currentSlide(2)">تابلو</span>
+                <span class="tab" onclick="currentSlide(3)">ماگ و مینی ماگ</span>
+                <span class="tab" onclick="currentSlide(4)">نوشت افزار</span>
+            </div>
+            <div class="slides0 fade">
+                <img src="images/grid/first%20row/4050takhfif.jpg" alt="takhfif">
+            </div>
+            <div class="slides0 fade">
+                <img src="images/grid/first%20row/tabloue.jpg" alt="tabloue">
+            </div>
+            <div class="slides0 fade">
+                <img src="images/grid/first%20row/mug.jpg" alt="mug">
+            </div>
+            <div class="slides0 fade">
+                <img src="images/grid/first%20row/nevesht.jpg" alt="nevesht">
+            </div>
         </div>
         <div class="grid2">
-            <img src="images/grid/second%20row/s1.jpg" alt="s1" width="472" height="400">
+            <div class="slides1 fade">
+                <img src="images/grid/second%20row/s1.jpg" alt="s1">
+            </div>
+            <div class="slides1 fade">
+                <img src="images/grid/second%20row/s2.jpg" alt="s2">
+            </div>
+            <div class="slides1 fade">
+                <img src="images/grid/second%20row/s3.jpg" alt="s3">
+            </div>
+            <div class="slides1 fade">
+                <img src="images/grid/second%20row/s4.jpg" alt="s4">
+            </div>
+            <div class="slides1 fade">
+                <img src="images/grid/second%20row/s5.jpg" alt="s5">
+            </div>
+            <a class="prev" onclick="plusSlides(-1,1)">&#10095;</a>
+            <a class="next" onclick="plusSlides(1,1)">&#10094;</a>
         </div>
         <div class="grid3">
-            <img src="images/grid/second%20row/neshan.jpg" alt="neshan" width="943" height="400">
+            <img src="images/grid/second%20row/neshan.jpg" alt="neshan">
         </div>
         <div class="grid4">
-            <img src="images/grid/third%20row/s1.jpg" alt="s1" width="1425" height="375">
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s1.jpg" alt="s1">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s2.jpg" alt="s2">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s3.jpg" alt="s3">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s4.jpg" alt="s4">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s5.jpg" alt="s5">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s6.jpg" alt="s6">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s7.jpg" alt="s7">
+            </div>
+            <div class="slides2 fade">
+                <img src="images/grid/third%20row/s8.jpg" alt="s8">
+            </div>
+            <a class="prev" onclick="plusSlides(-1,2)">&#10095;</a>
+            <a class="next" onclick="plusSlides(1,2)">&#10094;</a>
         </div>
     </div>
--->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/45954f3fce.js"></script>
