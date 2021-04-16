@@ -1,3 +1,11 @@
+/*
+$(document).ready(function (){
+    $('#nav-btn').click(function (){
+        $('#nav-btn').toggleClass('fa-bars',100)
+        $('#nav-btn').toggleClass('fa-times',100)
+        $('.menu').toggleClass('active',500)
+    })
+})*/
 // menu btn
 function menuBtn () {
     var elem = document.getElementById('nav-btn');
@@ -41,3 +49,37 @@ function infinity(){
     plusSlides(1,2);
 }
 setInterval(infinity, 5000);
+// carousel
+const track = document.querySelector('.carousel');
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector('.head-carousel-btn a:first-child');
+const prevBtn = document.querySelector('.head-carousel-btn a:last-child');
+// const slideSize = slides[0].getBoundingClientRect();// gives an array of slides coordination
+// const slideWidth = slideSize.width;// getting width from slideSize
+const slideWidth = track.getBoundingClientRect().width;
+// functions
+const setSlidesPosition = (slide,index)=>{
+    slide.style.right = slideWidth * index/5 + "px";
+}
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(+' + targetSlide.style.right + ')';
+    currentSlide.classList.remove('current');
+    targetSlide.classList.add('current');
+}
+slides.forEach(setSlidesPosition);
+nextBtn.addEventListener('click', evt => {
+    const currentSlide = track.querySelector('.current');
+    const nextSlide = currentSlide.nextElementSibling;
+    let first = currentSlide.cloneNode(true);
+    track.append(first);
+    moveToSlide(track,currentSlide,nextSlide);
+    track.removeChild(currentSlide)
+});
+prevBtn.addEventListener('click', evt => {
+    const currentSlide = track.querySelector('.current');
+    const prevSlide = currentSlide.previousElementSibling;
+    let first = track.lastChild.cloneNode(true)
+    track.prepend(first);
+    moveToSlide(track,currentSlide,prevSlide);
+    track.removeChild(track.lastChild);
+});
