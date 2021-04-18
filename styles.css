@@ -258,6 +258,7 @@ ul{
     align-items: center;
 }
 .head-carousel-btn a{
+    user-select: none;
     padding: 6px 12px;
     border: 1px solid #607D8B;
     border-radius: 2px;
@@ -358,8 +359,11 @@ hr{
 /* carousel-body */
 .carousel{
     position: relative;
-    background: #00BCD4;
     transition: transform 0.5s ease;
+}
+.carousel-box{
+    height: 500px;
+    overflow: hidden;
 }
 .carousel-item{
     display: flex;
